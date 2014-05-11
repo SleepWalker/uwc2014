@@ -72,12 +72,12 @@
 				CanvasManager = {
 					initImageData: null,
 
-					drawImage: function(i)
+					drawImage: function(i, silent)
 					{
-						var that = this;
-						App.trigger('beforeDisplayImage');
+						var that = this,
+							refreshImageCache = true;
 
-						if(typeof i == 'string' && i.indexOf('data:') == 0)
+						if(typeof i == 'string') // data url или src
 						{
 							var img = new Image;
 							img.src = i;
@@ -87,17 +87,27 @@
 							return;
 						}
 
+						if(!silent)
+							App.trigger('beforeDisplayImage');
+
 						canvas.width = i.width;
 						canvas.height = i.height;
 						if('tagName' in i) // img tag
 							context.drawImage(i, 0, 0);
 						else 
+						{
+							refreshImageCache = false;
 							context.putImageData(i, 0, 0);
+						}
 
-						if(!this.initImageData)
+						if(refreshImageCache || !this.initImageData)
+						{
 							this.initImageData = this.getImageData();
+							App.trigger('newImage');
+						}
 
-						App.trigger('afterDisplayImage');
+						if(!silent)
+							App.trigger('afterDisplayImage');
 
 						return this;
 					},
@@ -111,7 +121,9 @@
 					 */
 					reset: function()
 					{
-						this.drawImage(this.initImageData);
+						App.trigger('afterResetImage');
+						this.drawImage(this.initImageData, true);
+						App.trigger('beforeResetImage');
 
 						return this;
 					},

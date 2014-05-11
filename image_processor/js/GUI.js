@@ -78,6 +78,7 @@ function($, Backbone, _, guiTpl, loaderTpl) {
 		initialize: function(options)
 		{
 			this.listenToOnce(this.app, 'init', this.initGUI);
+			this.listenTo(this.app, 'afterDisplayImage', function() {this.$el.removeClass('gui-no-image')});
 		},
 
 		initGUI: function()

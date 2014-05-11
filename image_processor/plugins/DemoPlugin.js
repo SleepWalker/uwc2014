@@ -19,7 +19,7 @@ define(['jquery', 'backbone', 'hbs!./demo/demo'], function($, Backbone, demoTpl)
 			var $el = $(e.target);
 			if($el.data('src') != '')
 			{
-				alert(123)
+				this.app.viewport.drawImage($el.data('src'));
 			}
 		},
 

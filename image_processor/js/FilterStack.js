@@ -101,6 +101,7 @@ function($, Backbone, filterContainerTpl) {
 				this.listenTo(this, 'add', this.initFilter);
 				this.listenTo(this, 'destroy', this.updateImage);
 				this.listenTo(this, 'sort', this.reapplyAllFilters);
+				this.listenTo(this.app, 'newImage', this.destroyAll);
 			},
 
 			comparator: function(model) 

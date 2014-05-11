@@ -2,17 +2,12 @@
 // TODO: описание каждого файла в шапке
 // TODO: обвертка для удобного обращения rgba (мб по xy)
 // TODO: причесать ЦСС
-// TODO: DND Image
 
 // TODO: http://requirejs.org/docs/jquery.html#cdnconfig
 // TODO: Transferable objects: http://www.html5rocks.com/en/tutorials/workers/basics/?redirect_from_locale=it
 // TODO: модальные окна
 // TODO: i18N
-// TODO: убрать мигание интерфейса при загрузке
 
-// TODO: кнопка для выбора активации демо-картинок
-
-// TODO: если какой-то из фильтров после начала обработки в цепи меняется, надо как-то прекращать его работу
 (function() {
 	"use strict";
 

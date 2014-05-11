@@ -181,6 +181,17 @@ function($, Backbone, _, guiTpl, loaderTpl) {
 			return this;
 		},
 
+		/**
+		 * Добавляет инструмент на панель инструментов
+		 */
+		addTool: function(el)
+		{
+			this.app.trigger('addTool', el);
+			var $el = $(el);
+			this.$('#filter-stack').insertBefore($el);
+			$el.wrap('<div class="row></div>');
+		},
+
 		resetFilters: function()
 		{
 			this.$el.removeClass('gui-with-filters');

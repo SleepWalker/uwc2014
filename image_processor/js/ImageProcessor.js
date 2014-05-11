@@ -163,12 +163,6 @@
 			for (var filterName in config.filters)
 				filterNames.push(filterName+'||'+config.filters[filterName].class);
 			filterNames.sort();
-			for (var i in filterNames)
-			{
-				(function(filterName, filterClass){
-					App.gui.addFilter(filterName, filterClass);
-				}).apply(null, filterNames[i].split('||'));
-			}
 
 			// Добавляем и инициируем плагины
 			var inited = 0, 
@@ -176,6 +170,12 @@
 				launchApp = function() {
 					App.trigger('beforeInit');
 					App.trigger('init'); // отсюда начинается рендеринг GUI
+					for (var i in filterNames)
+					{
+						(function(filterName, filterClass){
+							App.gui.addFilter(filterName, filterClass);
+						}).apply(null, filterNames[i].split('||'));
+					}
 					App.trigger('afterInit');
 				};
 

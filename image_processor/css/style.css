@@ -1,0 +1,181 @@
+html,
+body
+{
+	height: 100%;
+}
+
+body
+{
+	background: url('../images/bg-transparent.png');
+}
+
+/**
+ * TODO: оптимизация под мелкие разрешения
+ */
+
+#image
+{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.7);
+	-o-box-shadow: 0 0 5px rgba(0,0,0,0.7);
+	box-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+.filter .filter-slider
+{
+	display: inline-block;
+	width: 55px;
+	float: right;
+	margin-right: -70px;
+	margin-top: -5px;
+}
+
+.filter .slider {
+	width: 235px !important;
+}
+
+.filter .close
+{
+	margin: 5px;
+}
+
+.filter .panel-heading
+{
+	cursor: move;
+}
+
+.filter .progress
+{
+	margin-bottom: 0;
+}
+
+.filter-property
+{
+	margin-bottom: 10px;
+}
+
+.property-label
+{
+	line-height: 30px;
+	display: block;
+}
+
+#filter-stack
+{
+	position: absolute;
+	overflow: hidden;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 200px;
+}
+
+.gui
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	width: 365px;
+	margin: 30px;
+	height: calc(100% - 60px);
+	background: url('../images/UWC-small.png') center 98% no-repeat rgba(255, 255, 255, 0.7);
+}
+
+.gui-with-filters
+{
+	opacity: .3;
+	-webkit-transition: opacity .6s 3s ease;
+	-moz-transition: opacity .6s 3s ease;
+	-o-transition: opacity .6s 3s ease;
+	transition: opacity .6s 3s ease;
+}
+
+.gui:hover
+{
+	opacity: 1;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.gui > .row
+{
+	margin: 10px 0;
+}
+
+.gui h1
+{
+	font-size: 27px;
+	text-align: center;
+	margin: 0;
+}
+
+.gui-dropzone
+{
+	display: none;
+	background: #fff;
+	border: 3px dashed #3276B1;
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.gui-dropzone h3
+{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+}
+
+.gui-dnd .gui-dropzone
+{
+	display: block;
+}
+
+.hover .gui-dropzone
+{
+	border-color: #ff5954;
+}
+
+.hover .gui-dropzone h3
+{
+	font-size: 26px;
+}
+
+#loader
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.row-tools
+{
+	-webkit-transition: .6s;
+	-moz-transition:  .6s;
+	-o-transition:  .6s;
+	transition:  .6s;
+}
+
+.gui-no-image .row-tools
+{
+	height: 0px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}

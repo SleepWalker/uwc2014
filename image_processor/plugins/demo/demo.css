@@ -1,0 +1,10 @@
+/**
+ * Блок с демками и тестами
+ */
+.well.testing
+{
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	margin: 0;
+}

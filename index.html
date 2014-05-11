@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UAWebChallenge Filtering Demo</title>
+    <script data-main="/image_processor/js/ImageProcessor" src="/image_processor/vendor/require.min.js"></script>
+    <style type="text/css">
+      #pageLoader 
+      {
+        background:#fff;
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index: 999;
+      }
+      #pageLoader div {
+        position:absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        margin: auto;
+      }
+      #pageLoader div {
+        width: 100px;
+        height: 100px;
+        background: #3276B1;
+        border-radius: 50%;
+        display: flex;
+      }
+      #pageLoader div:before{
+        content:'';
+        width: 0;
+        height: 0;
+        margin:auto;
+        border: 20px solid #fff;
+        border-radius: 50%;
+        animation:loading6-ani1 1s infinite;
+      }
+      @keyframes loading6-ani1{
+        70%{
+          width: 100px;
+          height: 100px;
+        }
+        100%{
+          width: 100px;
+          height: 100px;
+          border-width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pageLoader"><div></div></div>
+    <canvas id="image" width="0" height="0"></canvas>
+  </body>
+</html>

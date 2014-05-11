@@ -4,7 +4,7 @@
 	var Median = {
 		filter: function(options)
 		{
-			importScripts('/image_processor/js/ImageData.js');
+			importScripts('image_processor/js/ImageData.js');
 			var clearCanvas = options.clearCanvas;
 
 			var imageData = new ImageData(this.imageData);

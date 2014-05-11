@@ -23,7 +23,7 @@
 		},
 		imageData: imageData
 	};
-	require(['/image_processor/config.js'], function(config) {
+	require(['image_processor/config.js'], function(config) {
 		sendMessage(message, function(d) {
 			test('Median', function() {
 				var valid = true;

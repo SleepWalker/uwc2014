@@ -29,14 +29,14 @@ define(function() {
 				deps: ['loadCss', 'jquery'],
 				init: function(loadCss)
 				{
-					loadCss('/image_processor/vendor/bootstrap/css/bootstrap.min.css');
+					loadCss('image_processor/vendor/bootstrap/css/bootstrap.min.css');
 				}
 			},
 			'bootstrap-slider': {
 				deps: ['loadCss', 'bootstrap'],
 				init: function(loadCss)
 				{
-					loadCss('/image_processor/vendor/bootstrap-slider/css/slider.css');
+					loadCss('image_processor/vendor/bootstrap-slider/css/slider.css');
 				}
 			},
 			"backbone": {

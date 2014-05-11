@@ -84,11 +84,11 @@ function($, Backbone, _, guiTpl, loaderTpl) {
 		{
 			var that = this;
 
-			this.app.loadCss('/image_processor/css/style.css', function() {
+			this.app.loadCss('image_processor/css/style.css', function() {
 				$('#pageLoader').remove();
 			});
 			// так как perfect-scrollbar - AMD модуль, для него нельзя погрузить css через shim, потому сделаем это тут
-			this.app.loadCss('/image_processor/vendor/perfect-scrollbar/min/perfect-scrollbar-0.4.10.min.css');
+			this.app.loadCss('image_processor/vendor/perfect-scrollbar/min/perfect-scrollbar-0.4.10.min.css');
 
 			this.render();
 			$('body')

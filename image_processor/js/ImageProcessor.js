@@ -16,7 +16,7 @@
 (function() {
 	"use strict";
 
-	require(['/image_processor/config.js'], function(config, loadCss) {
+	require(['image_processor/config.js'], function(config, loadCss) {
 		// инстанс приложения
 		var App = {};
 

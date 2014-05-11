@@ -5,7 +5,7 @@
 	var Noise = {
 		filter: function(options)
 		{
-			importScripts('/image_processor/js/ImageData.js');
+			importScripts('image_processor/js/ImageData.js');
 			var imageData = new ImageData(this.imageData);
 
 			var that = this;
